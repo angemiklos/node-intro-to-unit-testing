@@ -56,6 +56,12 @@ describe('fizzBuzzer', function() {
     });
   });
 
+  it('should return number if not mult of 3 or 5', function() {
+    [1, 2, 4, 7].forEach(function(input) {
+      expect(fizzBuzzer(input)).to.equal(input);
+    });
+  });
+
   it('should raise error if args not numbers', function() {
     // range of bad inputs where not numbers
     const badInputs = [
